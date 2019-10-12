@@ -91,16 +91,7 @@ static void flash_verify_write(void)
 static void report_results(void)
 {
     NRF_LOG_INFO("Result: %s", m_passed ? "Passed" : "Failed");
-    if (m_passed)
-    {
-        bsp_board_led_on(BSP_BOARD_LED_0);
-        bsp_board_led_off(BSP_BOARD_LED_1);
-    }
-    else
-    {
-        bsp_board_led_off(BSP_BOARD_LED_0);
-        bsp_board_led_on(BSP_BOARD_LED_1);
-    }
+    nrf_delay_ms(1000);
 }
 
 /**@brief Do any processing necessary for the current mode.
@@ -208,8 +199,8 @@ int main(void)
         }
         else
         {
-            bsp_board_led_on(BSP_BOARD_LED_1);
             bsp_board_led_off(BSP_BOARD_LED_0);
+            bsp_board_led_on(BSP_BOARD_LED_1);
         }
     }
 

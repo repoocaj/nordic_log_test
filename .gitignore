@@ -1,3 +1,19 @@
+# Build Directories
+Output/
+
+# Build Results
+artifacts/
+
+# Segger IDE session layout
+*.emSession
+
+# Segger JLink settings
+*.jlink
+
+# Macintosh folder attributes and metadata
+.DS_Store
+._*
+
 # Prerequisites
 *.d
 
